@@ -15,7 +15,7 @@ import '../screens/splash/splash.dart';
         GoRoute(path: "onboard", builder: (context, state)=> const OnBoard()),
         GoRoute(path: "auth", builder: (context, state)=> const Auth()),
         GoRoute(path: "login", builder: (context, state)=> const Login()),
-        GoRoute(path: "register", builder: (context, state)=> const Register()),
+        // GoRoute(path: "register", builder: (context, state)=> const Register()),
     ]
     ),
   ]); 

@@ -1,9 +1,11 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_screenutil/flutter_screenutil.dart';
 import 'package:velocity_x/velocity_x.dart';
+import 'package:go_router/go_router.dart';
 
 import '../../../../core/constants/my_assets.dart';
-import '../../../../core/constants/my_colors.dart';
+import '../../../commmon_widgets/outline_button.dart';
+import '../../../commmon_widgets/primary_button.dart';
 
 class Auth extends StatefulWidget {
   const Auth({super.key});
@@ -47,47 +49,15 @@ class _AuthState extends State<Auth> {
                 ),
 
                 20.h.heightBox,
-
-                ElevatedButton(
-                  onPressed: () {},
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: MyColors.primaryColor,
-                    minimumSize: Size(MediaQuery.of(context).size.width, 44.h),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(11.r),
-                    ),
-                  ),
-                  child: Text(
-                    "Login",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 16.sp,
-                      fontWeight: FontWeight.w700,
-                    ),
-                  ),
-                ),
+                PrimaryButton(title: "Login", onPressed: () {
+                   context.go("/login");
+                }),
 
                 12.h.heightBox,
 
-                ElevatedButton(
-                  onPressed: () {},
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: Colors.transparent,
-                    minimumSize: Size(MediaQuery.of(context).size.width, 44.h),
-                    shape: RoundedRectangleBorder(
-                      side: BorderSide(color: MyColors.white),
-                      borderRadius: BorderRadius.circular(11.r),
-                    ),
-                  ),
-                  child: Text(
-                    "Register",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 16.sp,
-                      fontWeight: FontWeight.w700,
-                    ),
-                  ),
-                ),
+                OutlineButton(title: "Register", onPressed: () {
+                   context.go("/register");
+                }),
               ],
             ),
           ),

@@ -8,6 +8,7 @@ import 'package:velocity_x/velocity_x.dart';
 
 import '../../../core/constants/my_assets.dart';
 import '../../../core/constants/my_colors.dart';
+import '../../commmon_widgets/primary_button.dart';
 import 'onboard_view_model.dart';
 import 'widgets/onboard_first.dart';
 
@@ -44,25 +45,12 @@ class _OnBoardState extends State<OnBoard> {
                 ).expand(),
 
                 61.h.heightBox,
-                ElevatedButton(
+
+                PrimaryButton(
+                  title: "Get Started",
                   onPressed: () {
                     context.go("/auth");
                   },
-                  style: ElevatedButton.styleFrom(
-                    backgroundColor: MyColors.primaryColor,
-                    minimumSize: Size(MediaQuery.of(context).size.width, 44.h),
-                    shape: RoundedRectangleBorder(
-                      borderRadius: BorderRadius.circular(11.r),
-                    ),
-                  ),
-                  child: Text(
-                    "Get Started",
-                    style: TextStyle(
-                      color: Colors.white,
-                      fontSize: 16.sp,
-                      fontWeight: FontWeight.w700,
-                    ),
-                  ),
                 ),
 
                 SizedBox(
@@ -85,7 +73,7 @@ class _OnBoardState extends State<OnBoard> {
                           activeDotColor: MyColors.primaryColor,
                           dotHeight: 14.0,
                           dotWidth: 14.0,
-                        ), 
+                        ),
                         onDotClicked: (index) {},
                       ),
 
