@@ -20,7 +20,6 @@ import '../screens/splash/splash.dart';
         GoRoute(path: "register", builder: (context, state)=> const Register()),
          GoRoute(path: "general", builder: (context, state)=> const  General()),
            GoRoute(path: "homedetails", builder: (context, state)=> const HomeDetails()),
-       
     ]
     ),
   ]); 
