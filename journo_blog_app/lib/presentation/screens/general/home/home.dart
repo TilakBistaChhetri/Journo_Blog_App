@@ -41,6 +41,7 @@ class _HomeState extends State<Home> {
                 itemBuilder: (context, index) {
                   return Row(
                     children: [
+                      
                       InkWell(
                         onTap: () => context.go("/homedetails"),
                         child: Image.asset(
